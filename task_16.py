@@ -7,8 +7,8 @@ n = int(input('Введите длину массива n: '))       # Альт�
 a = [input() for i in range(n)]                   # a = []
 x = (input('Введите число x: '))                  # for i in range (n):
 count = 0                                         #     a.append(int(input()))
-for i in range(n):
-    if a[i] == x:
+for i in a:
+    if i == x:
         count += 1
 print (count)
   
