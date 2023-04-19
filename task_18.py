@@ -5,11 +5,13 @@
 
 from random import randint
 n = int(input('Введите количество элементов n: '))
-A = [randint(0,20)for i in range (n)]
+A = [randint(0,11)for i in range (n)]
 print(A)
 x = int(input('Введите число х: ')) 
 result = abs(x-A[0])
-for i in range(n):
-    if abs(x-A[i]) < result:
-        result = A[i]
-print(result)
+number = A[0]
+for i in A:
+    if abs(x-i) < result:
+        result = abs(x-i)
+        number = i
+print(number)
