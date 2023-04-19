@@ -2,15 +2,23 @@
 # Пользователь в первой строке вводит натуральное число N – количество элементов в массиве.
 # В последующих строках записаны N целых чисел Ai. Последняя строка содержит число X
 
+ # Способ 1                                 
+# n = int(input('Введите длину массива n: '))       # Вводим числа с клавиатуры    
+# a = [input() for i in range(n)]                   # Альтернативное заполнение списка:
+# x = (input('Введите число x: '))                  # a = []
+# count = 0                                         # for i in range (n):    
+# for i in a:                                       #a.append(int(input()))
+#     if i == x:      
+#         count += 1
+# print (count)
 
-n = int(input('Введите длину массива n: '))       # Альтернативное заполнение списка:     
-a = [input() for i in range(n)]                   # a = []
-x = (input('Введите число x: '))                  # for i in range (n):
-count = 0                                         #     a.append(int(input()))
-for i in a:
-    if i == x:
-        count += 1
-print (count)
+# Способ 2
+n = int(input('Введите длину массива n: '))
+from random import randint                      #  Создаём список из n элементов и заполняем 
+a = [randint(-10,11) for i in range(n)]         #  рандомными числами от -10 до 10
+x = int(input('Введите число x: ')) 
+print(a)
+print(f"число {x} содержится {a.count(x)} раз")    #  функция a.count(x) ищет число x в списке а
   
 
 
